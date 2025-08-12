@@ -189,7 +189,22 @@ in
         ui.background = { };
       };
     };
-
+    # git/gh
+    programs.git = {
+      enable = true;
+      userName = "<name>";
+      userEmail = "<email>";
+      signing = {
+        key = "<key>";
+        signByDefault = true;
+      };
+    };
+    programs.gh = {
+      enable = true;
+      gitCredentialHelper = {
+        enable = true;
+      };
+    };
     
 
     # You should not change this value, even if you update Home Manager. If you do 
