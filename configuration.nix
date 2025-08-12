@@ -85,6 +85,7 @@ in
       '';
       shellAliases = {
         ls = "eza -al";
+        snrsf = "sudo nixos-rebuild switch --flake .";
       };
     };
     # helix
@@ -204,6 +205,12 @@ in
       gitCredentialHelper = {
         enable = true;
       };
+    };
+    programs.gpg.enable = true;
+    services.gpg-agent = {
+      enable = true;
+      enableSshSupport = true;
+      # pinentryPackage = pkgs.pinentry-curses; # or another suitable pinentry
     };
     
 
