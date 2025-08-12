@@ -377,6 +377,8 @@ in
       ExecStart = "/home/millankumar/code/ImageConvertBot/run.sh";
       Type = "simple";
       Restart = "always";
+      Requires = [ "docker.service" ];
+      After = [ "docker.service" ];
     };
   };
   # NPC
