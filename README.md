@@ -1,2 +1,3 @@
-# nixos-config
-Personal NixOS configuration files.
+# nixos-server
+
+Personal NixOS server configuration
